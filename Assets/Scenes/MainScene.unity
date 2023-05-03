@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HighCam
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -263,6 +263,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1607045932426662549, guid: 7bd4c18529c8cd44092ce8759df7ae51,
     type: 3}
   m_PrefabInstance: {fileID: 1002078100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &83632273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca9b7aef5d65b16449db9502b239b8e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 337191435}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &148647844
 PrefabInstance:
@@ -495,7 +501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HighCam
+  m_text: ChangeHouse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1145,10 +1151,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd3e4f7e23bcca46905a2cb5f0d23a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 330585545}
-  building1: {fileID: 2117209677}
-  building2: {fileID: 521011695}
-  building3: {fileID: 1766406967}
+  buildings:
+  - {fileID: 2117209677}
+  - {fileID: 521011695}
+  - {fileID: 1766406967}
+  floorSys:
+  - {fileID: 83632273}
+  - {fileID: 1098854265}
+  - {fileID: 1514992837}
   Press: {fileID: 0}
 --- !u!1001 &493153280
 PrefabInstance:
@@ -1230,7 +1240,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca9b7aef5d65b16449db9502b239b8e5,
         type: 3}
       propertyPath: m_Name
-      value: Floor_System
+      value: Floor_System(2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b7aef5d65b16449db9502b239b8e5, type: 3}
@@ -2337,6 +2347,12 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1098854265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca9b7aef5d65b16449db9502b239b8e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1344848034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1183915936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2532,10 +2548,16 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca9b7aef5d65b16449db9502b239b8e5,
         type: 3}
       propertyPath: m_Name
-      value: Floor_System
+      value: Floor_System(1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b7aef5d65b16449db9502b239b8e5, type: 3}
+--- !u!1 &1514992837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca9b7aef5d65b16449db9502b239b8e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 493153280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1591120285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3226,8 +3248,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2117209677}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3238,8 +3260,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 521011695}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3250,8 +3272,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1766406967}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
